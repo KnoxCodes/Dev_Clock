@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, 0.337);
+    background-image: url("assets/Matric-code.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10vh;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(2px);
+    width: 100%; 
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.display {
+    font-size: 6rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controls button {
+    font-size: 1.25rem; 
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 5px;
+    min-width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.5s ease;
+    touch-action: manipulation;
+}
+
+.start-button {
+    background-color: hsla(115, 100%, 40%, 0.35);
+}
+
+.start-button:hover {
+    background-color: hsl(115, 100%, 35%);
+}
+
+.stop-button {
+    background-color: hsla(10, 90%, 50%, 0.35);
+}
+
+.stop-button:hover {
+    background-color: hsl(10, 90%, 45%);
+}
+
+.reset-button {
+    background-color: hsla(205, 90%, 60%, 0.35);
+}
+
+.reset-button:hover {
+    background-color: hsl(205, 90%, 55%);
+}
+
+@media (max-width: 768px) {
+    .stopwatch {
+        padding: 15px;
+        margin-top: 5vh;
+    }
+
+    .display {
+        font-size: 4rem;
+    }
+
+    .controls button {
+        font-size: 1rem;
+        min-width: 90px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stopwatch {
+        padding: 10px;
+        margin-top: 3vh;
+    }
+
+    .display {
+        font-size: 2.5rem;
+    }
+
+    .controls button {
+        font-size: 0.9rem;
+        min-width: 80px;
+        padding: 6px 10px;
+    }
+}
